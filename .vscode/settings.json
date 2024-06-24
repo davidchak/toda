@@ -15,7 +15,6 @@
 	"editor.detectIndentation": false,
 	"editor.insertSpaces": false,
 	// eslint
-	"eslint.alwaysShowStatus": true,
 	"eslint.codeActionsOnSave.mode": "problems",
 	"eslint.format.enable": true,
 	"eslint.validate": [
@@ -23,17 +22,12 @@
 		"html",
 		"vue-html"
 	],
-	// vetur
-	"vetur.validation.script": false,
-	"vetur.validation.template": false,
-	"vetur.format.defaultFormatter.html": "prettier",
-	"vetur.format.defaultFormatter.pug": "prettier",
-	"vetur.format.defaultFormatter.css": "prettier",
-	"vetur.format.defaultFormatter.less": "prettier",
-	"vetur.format.defaultFormatter.js": "prettier",
 	"stylelint.validate": [
 		"css",
+		"scss",
 		"less"
 	],
-	"git.ignoreLimitWarning": true
+	"git.ignoreLimitWarning": true,
+	// code spell check
+	"cSpell.language": "en,ru",
 }

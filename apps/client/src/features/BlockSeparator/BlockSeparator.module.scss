@@ -1,0 +1,17 @@
+.block-separator {
+	width: 4px;
+	background-color: #E5E5E5;
+	border-radius: 2px;
+
+	&:hover {
+		background-color: #3C92DC;
+		width: 6px;
+		cursor: ew-resize;
+	}
+
+	&_move {
+		background-color: #3C92DC;
+		width: 6px;
+		cursor: ew-resize;
+	}
+}

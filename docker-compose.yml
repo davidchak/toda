@@ -1,0 +1,52 @@
+version: '3'
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/24
+
+services:
+  http-server:
+    image: nginx:latest
+    container_name: 'front'
+    restart: unless-stopped
+    networks:
+      net:
+        ipv4_address: 10.0.0.10
+
+  client-api:
+    extends:
+      file: ./api/api.docker-compose.yml
+      service: api
+    restart: unless-stopped
+    networks:
+      net:
+        ipv4_address: 10.0.0.11
+    depends_on:
+      - db
+      - mq
+
+  # db:
+  #   extends:
+  #     file: ./postgres/docker-compose.yml
+  #     service: db
+  #   networks:
+  #     net:
+  #       ipv4_address: 10.0.0.12
+
+  # db_gui:
+  #   extends:
+  #     file: ./postgres/docker-compose.yml
+  #     service: adminer
+  #   networks:
+  #     net:
+  #       ipv4_address: 10.0.0.13
+  #   depends_on:
+  #     - db
+
+
+
+

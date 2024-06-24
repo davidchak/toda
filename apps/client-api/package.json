@@ -1,0 +1,24 @@
+{
+	"name": "@todo/client-api",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/types.js",
+	"license": "MIT",
+	"scripts": {
+		"dev": "nodemon src/index.ts",
+		"test": "jest",
+		"build": "tsc"
+	},
+	"dependencies": {
+		"@typegoose/typegoose": "^10.1.1",
+		"chalk": "4",
+		"http-status": "^1.6.2",
+		"mongoose": "^6.9.1",
+		"pino-http": "^8.3.3",
+		"reflect-metadata": "^0.1.13"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1"
+	}
+}

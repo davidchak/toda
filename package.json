@@ -1,23 +1,24 @@
 {
-	"name": "todo.larus.pro",
+	"name": "todo",
 	"root": true,
+	"private": true,
 	"version": "1.0.0",
 	"description": "",
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": "please-use-yarn",
+		"yarn": "1.22.19"
+	},
 	"workspaces": [
 		"./apps/*"
 	],
 	"scripts": {
-		"dev": "lerna run --parallel start -- -- -r dotenv/config",
-		"build": "lerna run --parallel build",
-		"bootstrap": "lerna bootstrap --use-workspaces",
-		"graph": "nx graph"
+		"dev:client": "./scripts/dev/client.sh",
+		"dev:client-api": "./scripts/dev/client-api.sh"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/davidchak/todo.larus.pro.git"
-	},
+	"repository": "git+https://github.com/davidchak/todo.larus.pro.git",
 	"keywords": [],
-	"author": "",
+	"author": "David Chakiryan <davidchak@yandex.ru>",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/davidchak/todo.larus.pro/issues"
